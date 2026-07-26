@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS Builder Center | BITS Student Community</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Explore cloud computing, AI and emerging technologies through the AWS Builder Center student community at Baba Institute of Technology and Sciences (BITS Vizag).">
+  <meta name="keywords"
+    content="AWS, AWS Builder Center, BITS Vizag, Achanta Mahendra, Student Builder Campus Leader, Cloud Computing, AI, Machine Learning, Serverless, BITS Community">
+  <meta name="author" content="Achanta Mahendra - AWS Student Builder Campus Leader">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://awsbuilderbits.vercel.app/">
+  <meta property="og:title" content="AWS Builder Center | BITS Student Community">
+  <meta property="og:description"
+    content="Explore cloud computing, AI and modern technologies with the student community at Baba Institute of Technology and Sciences.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AWS Builder Center | BITS Student Community">
+  <meta name="twitter:description"
+    content="Explore cloud computing, AI and modern technologies with the student community at Baba Institute of Technology and Sciences.">
+  <meta name="twitter:image" content="assets/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts & Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Lucide Icons CDN (v0 supports brand icons: linkedin, github, instagram) -->
+  <script src="https://unpkg.com/lucide@0"></script>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "AWS Student Builder Center - BITS Vizag",
+    "url": "https://awsbuilderbits.vercel.app/",
+    "logo": "assets/logo.png",
+    "description": "Student-led community introducing cloud computing, AI, and modern technologies at Baba Institute of Technology and Sciences.",
+    "parentOrganization": {
+      "@type": "EducationalOrganization",
+      "name": "Baba Institute of Technology and Sciences"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar"></div>
+
+  <!-- Engineering Grid & Background Lighting -->
+  <div class="engineering-grid"></div>
+  <div class="cursor-glow"></div>
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader-content">
+      <img src="assets/logo.png" alt="AWS Student Builder Center Logo" class="loader-logo">
+      <div class="loader-progress">
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="AWS Builder Center Home">
+        <img src="assets/logo.png" alt="AWS Student Builder Center" class="nav-logo">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about-aws" class="nav-link">About AWS</a></li>
+        <li><a href="#builder-center" class="nav-link">Builder Center</a></li>
+        <li><a href="#why-join" class="nav-link">Why Join</a></li>
+        <li><a href="#roadmap" class="nav-link">Learning</a></li>
+        <li><a href="#tech-explorer" class="nav-link">Technologies</a></li>
+        <li><a href="#activities" class="nav-link">Activities</a></li>
+        <li><a href="#events" class="nav-link">Events</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Register Now <i data-lucide="arrow-right" class="btn-icon"></i>
+        </a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-menu">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#about-aws" class="nav-link">About AWS</a>
+      <a href="#builder-center" class="nav-link">Builder Center</a>
+      <a href="#why-join" class="nav-link">Why Join</a>
+      <a href="#roadmap" class="nav-link">Learning</a>
+      <a href="#tech-explorer" class="nav-link">Technologies</a>
+      <a href="#activities" class="nav-link">Activities</a>
+      <a href="#events" class="nav-link">Events</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" class="btn btn-primary"
+        style="margin-top: 10px; text-align: center;">Register Now</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>AWS STUDENT BUILDER CAMPUS LEADER CHAPTER</span>
+        </div>
+
+        <h1 class="hero-title">
+          Build Your Future with <span class="gradient-text">AWS Builder Center</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Explore cloud computing, artificial intelligence and modern technologies through our student community at Baba
+          Institute of Technology and Sciences.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" rel="noopener noreferrer"
+            class="btn btn-primary">
+            Register Now <i data-lucide="arrow-right" class="btn-icon"></i>
+          </a>
+          <a href="https://chat.whatsapp.com/CL9yrVUuL0i7HDB2lltAYP" class="btn btn-secondary">
+            <i data-lucide="message-circle" style="width: 18px; color: #59F3D5;"></i> Join WhatsApp Community
+          </a>
+        </div>
+
+      </div>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>Free Resources</p>
+      </div>
+    </div>
+    </div>
+
+    <!-- Hero Visual Card Stack -->
+    <div class="hero-visual">
+      <div class="hero-card-stack">
+        <div class="hero-main-card">
+          <div class="card-logo-box">
+            <img src="assets/logo.png" alt="AWS Builder Center" class="card-brand-logo">
+            <span class="card-code-tag">ESTD 2026</span>
+          </div>
+
+          <div class="cloud-node-graphic">
+            <div class="floating-node node-1">
+              <i data-lucide="sparkles" style="color: #59F3D5; width: 18px;"></i>
+              <span>GenAI & Bedrock</span>
+            </div>
+            <div class="floating-node node-2">
+              <i data-lucide="zap" style="color: #FF9900; width: 18px;"></i>
+              <span>Serverless Lambda</span>
+            </div>
+            <div class="floating-node node-3">
+              <i data-lucide="shield-check" style="color: #B38BFF; width: 18px;"></i>
+              <span>Cloud Security</span>
+            </div>
+          </div>
+
+          <div
+            style="border-top: 1px solid var(--border-color); padding-top: 16px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">
+            <span>BITS Vizag Campus Chapter</span>
+            <span style="color: var(--aws-orange);">● Active</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <a href="#about-aws" class="scroll-indicator">
+      <span>EXPLORE</span>
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- About AWS Section -->
+  <section id="about-aws">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Cloud Foundations</span>
+        <h2 class="section-title">What is AWS & Why Cloud Matters?</h2>
+        <p class="section-subtitle">
+          Amazon Web Services (AWS) is the world's most comprehensive and broadly adopted cloud platform. Cloud
+          computing powers everything from global streaming services to artificial intelligence.
+        </p>
+      </div>
+
+      <div class="cards-grid about-features-grid">
+        <div class="glass-card">
+          <div class="card-icon"><i data-lucide="cloud"></i></div>
+          <h3 class="card-title">Cloud Computing</h3>
+          <p class="card-text">On-demand delivery of IT resources over the internet with pay-as-you-go pricing,
+            eliminating physical server overhead.</p>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-icon"><i data-lucide="cpu"></i></div>
+          <h3 class="card-title">Artificial Intelligence</h3>
+          <p class="card-text">Build and scale generative AI applications with Amazon Bedrock, foundation models, and
+            custom AI copilots.</p>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-icon"><i data-lucide="brain-circuit"></i></div>
+          <h3 class="card-title">Machine Learning</h3>
+          <p class="card-text">Build, train, and deploy predictive models at scale using Amazon SageMaker and automated
+            ML tools.</p>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-icon"><i data-lucide="zap"></i></div>
+          <h3 class="card-title">Serverless Computing</h3>
+          <p class="card-text">Run code without provisioning or managing servers. Pay only for compute time consumed
+            with AWS Lambda.</p>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-icon"><i data-lucide="shield"></i></div>
+          <h3 class="card-title">Cloud Security</h3>
+          <p class="card-text">Architect highly secure, compliant applications with AWS Identity & Access Management
+            (IAM) and zero-trust models.</p>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-icon"><i data-lucide="database"></i></div>
+          <h3 class="card-title">Modern Databases</h3>
+          <p class="card-text">Purpose-built database engines like Amazon Aurora and DynamoDB engineered for
+            sub-millisecond latency.</p>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-icon"><i data-lucide="box"></i></div>
+          <h3 class="card-title">Containers & K8s</h3>
+          <p class="card-text">Deploy resilient microservices with Amazon ECS, EKS (Kubernetes), and serverless
+            container execution via AWS Fargate.</p>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-icon"><i data-lucide="network"></i></div>
+          <h3 class="card-title">Global Networking</h3>
+          <p class="card-text">Connect global infrastructure seamlessly with Amazon VPC, Route 53, and CloudFront edge
+            locations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Builder Center Section -->
+  <section id="builder-center">
+    <div class="container">
+      <div class="builder-center-box">
+        <div class="builder-info">
+          <span class="section-tag">Student Empowerment</span>
+          <h3>What is AWS Builder Center?</h3>
+          <p>
+            AWS Builder Center is a student-driven initiative designed to encourage hands-on technical exploration,
+            curiosity, and practical skills development in cloud technology.
+          </p>
+          <ul class="builder-list">
+            <li class="builder-list-item">
+              <i data-lucide="check-circle-2" class="check-icon"></i>
+              <span>Access self-paced learning paths and official AWS Skill Builder modules.</span>
+            </li>
+            <li class="builder-list-item">
+              <i data-lucide="check-circle-2" class="check-icon"></i>
+              <span>Participate in peer-led hackathons, mini-pitches, and cloud workshops.</span>
+            </li>
+            <li class="builder-list-item">
+              <i data-lucide="check-circle-2" class="check-icon"></i>
+              <span>Build real-world projects in GenAI, Serverless, DevOps, and Cybersecurity.</span>
+            </li>
+            <li class="builder-list-item">
+              <i data-lucide="check-circle-2" class="check-icon"></i>
+              <span>Connect with tech enthusiasts across BITS Vizag campus.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="glass-card" style="padding: 40px; border-color: rgba(255,153,0,0.3);">
+          <h4 style="font-family: var(--font-mono); font-size: 1.2rem; color: var(--aws-orange); margin-bottom: 14px;">
+            Our Community Philosophy</h4>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem; margin-bottom: 20px;">
+            We focus strictly on genuine learning, technology curiosity, and hands-on skill building. We inspire
+            engineering students to experiment with modern architectures and create impactful software.
+          </p>
+          <div
+            style="background: rgba(255, 153, 0, 0.08); padding: 14px 18px; border-radius: var(--radius-sm); border-left: 3px solid var(--aws-orange); font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-primary);">
+            "The best way to predict the future is to build it."
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Join Section -->
+  <section id="why-join">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Student Benefits</span>
+        <h2 class="section-title">Why Join Our Community?</h2>
+        <p class="section-subtitle">
+          Empowering BITS Vizag students to gain practical cloud experience, explore emerging technologies, and
+          collaborate on real-world projects.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="glass-card">
+          <div class="card-icon"><i data-lucide="book-open"></i></div>
+          <h3 class="card-title">Learn Cloud</h3>
+          <p class="card-text">Master fundamental and advanced cloud concepts through guided learning roadmaps and AWS
+            documentation.</p>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-icon"><i data-lucide="sparkles"></i></div>
+          <h3 class="card-title">Explore AI</h3>
+          <p class="card-text">Experiment with Foundation Models, prompt engineering, and generative AI APIs using
+            Amazon Bedrock.</p>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-icon"><i data-lucide="code-2"></i></div>
+          <h3 class="card-title">Build Projects</h3>
+          <p class="card-text">Transform theoretical knowledge into working cloud-native web applications and backend
+            APIs.</p>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-icon"><i data-lucide="users"></i></div>
+          <h3 class="card-title">Tech Community</h3>
+          <p class="card-text">Join a passionate network of student developers, designers, and tech enthusiasts at BITS
+            Vizag.</p>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-icon"><i data-lucide="folder-git-2"></i></div>
+          <h3 class="card-title">Learning Resources</h3>
+          <p class="card-text">Get curated access to AWS Skill Builder, workshop repositories, sample code, and
+            architecture diagrams.</p>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-icon"><i data-lucide="calendar"></i></div>
+          <h3 class="card-title">Events & Workshops</h3>
+          <p class="card-text">Participate in regular technical meetups, live coding sessions, and campus cloud
+            hackathons.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning Journey Roadmap -->
+  <section id="roadmap">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Step-by-Step Path</span>
+        <h2 class="section-title">Your Learning Journey</h2>
+        <p class="section-subtitle">
+          A structured roadmap guiding students from basic technology curiosity to cloud architecture innovation.
+        </p>
+      </div>
+
+      <div class="roadmap-container">
+        <div class="roadmap-item">
+          <div class="roadmap-node"></div>
+          <div class="roadmap-card">
+            <div class="roadmap-step">STEP 01</div>
+            <h3 style="font-family: var(--font-mono); font-size: 1.15rem; margin-bottom: 8px;">Curiosity & Interest</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Discover how modern technology and the internet
+              work behind the scenes.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-node"></div>
+          <div class="roadmap-card">
+            <div class="roadmap-step">STEP 02</div>
+            <h3 style="font-family: var(--font-mono); font-size: 1.15rem; margin-bottom: 8px;">Cloud Basics</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Understand core cloud concepts: Compute (EC2),
+              Storage (S3), and Networking (VPC).</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-node"></div>
+          <div class="roadmap-card">
+            <div class="roadmap-step">STEP 03</div>
+            <h3 style="font-family: var(--font-mono); font-size: 1.15rem; margin-bottom: 8px;">Hands-on Learning</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Complete interactive labs on AWS Skill Builder
+              and AWS Free Tier accounts.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-node"></div>
+          <div class="roadmap-card">
+            <div class="roadmap-step">STEP 04</div>
+            <h3 style="font-family: var(--font-mono); font-size: 1.15rem; margin-bottom: 8px;">Projects & Demos</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Build serverless REST APIs, static sites, and AI
+              chatbots in student teams.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-node"></div>
+          <div class="roadmap-card">
+            <div class="roadmap-step">STEP 05</div>
+            <h3 style="font-family: var(--font-mono); font-size: 1.15rem; margin-bottom: 8px;">Community Engagement</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Share project insights, present at campus
+              meetups, and mentor junior builders.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-node"></div>
+          <div class="roadmap-card">
+            <div class="roadmap-step">STEP 06</div>
+            <h3 style="font-family: var(--font-mono); font-size: 1.15rem; margin-bottom: 8px;">Innovation & Beyond</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Architect complex cloud solutions, participate
+              in hackathons, and innovate relentlessly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Explorer -->
+  <section id="tech-explorer">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Domain Index</span>
+        <h2 class="section-title">Technology Explorer</h2>
+        <p class="section-subtitle">
+          Click on any technology card below to launch an interactive deep-dive modal detailing concepts, applications,
+          and AWS learning resources.
+        </p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card" data-tech="ai">
+          <div class="tech-card-header">
+            <i data-lucide="sparkles" class="tech-icon" style="color: #59F3D5;"></i>
+            <i data-lucide="arrow-right" class="tech-arrow"></i>
+          </div>
+          <div>
+            <h3 class="tech-card-title">Artificial Intelligence</h3>
+            <span class="tech-badge">Generative AI & Bedrock</span>
+          </div>
+        </div>
+
+        <div class="tech-card" data-tech="ml">
+          <div class="tech-card-header">
+            <i data-lucide="brain-circuit" class="tech-icon" style="color: #87EFFF;"></i>
+            <i data-lucide="arrow-right" class="tech-arrow"></i>
+          </div>
+          <div>
+            <h3 class="tech-card-title">Machine Learning</h3>
+            <span class="tech-badge">SageMaker & Predictive Models</span>
+          </div>
+        </div>
+
+        <div class="tech-card" data-tech="cloud">
+          <div class="tech-card-header">
+            <i data-lucide="cloud" class="tech-icon" style="color: #FF9900;"></i>
+            <i data-lucide="arrow-right" class="tech-arrow"></i>
+          </div>
+          <div>
+            <h3 class="tech-card-title">Cloud Computing</h3>
+            <span class="tech-badge">EC2, S3 & Global Infra</span>
+          </div>
+        </div>
+
+        <div class="tech-card" data-tech="cybersecurity">
+          <div class="tech-card-header">
+            <i data-lucide="shield-check" class="tech-icon" style="color: #B38BFF;"></i>
+            <i data-lucide="arrow-right" class="tech-arrow"></i>
+          </div>
+          <div>
+            <h3 class="tech-card-title">Cybersecurity</h3>
+            <span class="tech-badge">IAM & Zero Trust</span>
+          </div>
+        </div>
+
+        <div class="tech-card" data-tech="devops">
+          <div class="tech-card-header">
+            <i data-lucide="git-branch" class="tech-icon" style="color: #F29EFF;"></i>
+            <i data-lucide="arrow-right" class="tech-arrow"></i>
+          </div>
+          <div>
+            <h3 class="tech-card-title">DevOps & CI/CD</h3>
+            <span class="tech-badge">CDK & CloudFormation</span>
+          </div>
+        </div>
+
+        <div class="tech-card" data-tech="containers">
+          <div class="tech-card-header">
+            <i data-lucide="box" class="tech-icon" style="color: #59F3D5;"></i>
+            <i data-lucide="arrow-right" class="tech-arrow"></i>
+          </div>
+          <div>
+            <h3 class="tech-card-title">Containers</h3>
+            <span class="tech-badge">ECS, EKS & Docker</span>
+          </div>
+        </div>
+
+        <div class="tech-card" data-tech="networking">
+          <div class="tech-card-header">
+            <i data-lucide="network" class="tech-icon" style="color: #87EFFF;"></i>
+            <i data-lucide="arrow-right" class="tech-arrow"></i>
+          </div>
+          <div>
+            <h3 class="tech-card-title">Cloud Networking</h3>
+            <span class="tech-badge">VPC & CloudFront</span>
+          </div>
+        </div>
+
+        <div class="tech-card" data-tech="iot">
+          <div class="tech-card-header">
+            <i data-lucide="cpu" class="tech-icon" style="color: #FF9900;"></i>
+            <i data-lucide="arrow-right" class="tech-arrow"></i>
+          </div>
+          <div>
+            <h3 class="tech-card-title">Internet of Things</h3>
+            <span class="tech-badge">AWS IoT Core</span>
+          </div>
+        </div>
+
+        <div class="tech-card" data-tech="serverless">
+          <div class="tech-card-header">
+            <i data-lucide="zap" class="tech-icon" style="color: #B38BFF;"></i>
+            <i data-lucide="arrow-right" class="tech-arrow"></i>
+          </div>
+          <div>
+            <h3 class="tech-card-title">Serverless</h3>
+            <span class="tech-badge">AWS Lambda & Step Functions</span>
+          </div>
+        </div>
+
+        <div class="tech-card" data-tech="databases">
+          <div class="tech-card-header">
+            <i data-lucide="database" class="tech-icon" style="color: #F29EFF;"></i>
+            <i data-lucide="arrow-right" class="tech-arrow"></i>
+          </div>
+          <div>
+            <h3 class="tech-card-title">Modern Databases</h3>
+            <span class="tech-badge">Aurora & DynamoDB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Modal for Technology Explorer -->
+  <div id="tech-modal" class="modal-overlay">
+    <div class="modal-container">
+      <button id="modal-close-btn" class="modal-close" aria-label="Close Modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-header">
+        <span id="modal-badge" class="section-tag" style="margin-bottom: 8px;">Category</span>
+        <h2 id="modal-title" class="modal-title">Technology Title</h2>
+      </div>
+      <div class="modal-body">
+        <div>
+          <h4 class="modal-section-title">WHAT IT IS</h4>
+          <p id="modal-desc">Detailed explanation goes here.</p>
+        </div>
+        <div>
+          <h4 class="modal-section-title">WHY IT MATTERS</h4>
+          <p id="modal-why">Industry relevance and applications.</p>
+        </div>
+        <div>
+          <h4 class="modal-section-title">AWS LEARNING RESOURCES</h4>
+          <p id="modal-aws">Official learning pathways.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Campus Activities Section -->
+  <section id="activities">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">BITS Vizag Initiatives</span>
+        <h2 class="section-title">Campus Activities</h2>
+        <p class="section-subtitle">
+          Timeline of student activities organized by the AWS Student Builder Campus Leader chapter at BITS Vizag.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-tag">INITIATIVE 01</span>
+            <h3 style="font-family: var(--font-mono); font-size: 1.2rem; margin-bottom: 6px;">Classroom Announcements
+            </h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem;">Interactive awareness sessions introducing
+              student developers across departments to the AWS Builder Center ecosystem.</p>
+          </div>
+        </div>
+
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-tag">INITIATIVE 02</span>
+            <h3 style="font-family: var(--font-mono); font-size: 1.2rem; margin-bottom: 6px;">Table Events & Booths</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem;">Interactive campus table displays providing
+              quick Q&A, guidance, and learning roadmap distribution.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-tag">INITIATIVE 03</span>
+            <h3 style="font-family: var(--font-mono); font-size: 1.2rem; margin-bottom: 6px;">Community Meetups</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem;">Collaborative peer discussions, architecture
+              whiteboarding, and tech career skill explorations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Events Section -->
+  <section id="events">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Campus Calendar</span>
+        <h2 class="section-title">Upcoming Events</h2>
+        <p class="section-subtitle">
+          Join our upcoming interactive campus events, workshops, and cloud builder lab sessions.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="glass-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <span
+              style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--aws-orange); background: rgba(255,153,0,0.1); padding: 4px 10px; border-radius: var(--radius-sm);">REGISTRATION
+              OPEN</span>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">AUG 3RD
+              2026</span>
+          </div>
+          <h3 class="card-title">Class Announcements</h3>
+          <p class="card-text" style="margin-bottom: 20px;">Stay updated with the latest announcements and events from
+            the AWS Student Builder Campus Leader chapter at BITS Vizag.</p>
+          <div
+            style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 24px;">
+            <p><i data-lucide="map-pin" style="width: 14px; color: var(--aws-orange);"></i> BITS Vizag </p>
+          </div>
+          <a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" class="btn btn-primary"
+            style="width: 100%;">Register Now</a>
+        </div>
+
+        <div class="glass-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <span
+              style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-teal); background: rgba(89,243,213,0.1); padding: 4px 10px; border-radius: var(--radius-sm);">UPCOMING</span>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">SOON</span>
+          </div>
+          <h3 class="card-title">Mini-Pitches</h3>
+          <p class="card-text" style="margin-bottom: 20px;">Compete in thrilling 60-second pitch competitions to
+            showcase your innovative ideas to faculty and peers. </p>
+          <div
+            style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 24px;">
+            <p><i data-lucide="map-pin" style="width: 14px; color: var(--aws-orange);"></i> Computer Science Lab 2</p>
+          </div>
+          <a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" class="btn btn-secondary"
+            style="width: 100%;">Register Now</a>
+        </div>
+
+        <div class="glass-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <span
+              style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-purple); background: rgba(179,139,255,0.1); padding: 4px 10px; border-radius: var(--radius-sm);">UPCOMING</span>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">SOON</span>
+          </div>
+          <h3 class="card-title">Tabling Events</h3>
+          <p class="card-text" style="margin-bottom: 20px;">Engage directly with our team at interactive booths. We’re
+            here to answer your questions, share resources, and guide you on your cloud journey.</p>
+          <div
+            style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 24px;">
+            <p><i data-lucide="map-pin" style="width: 14px; color: var(--aws-orange);"></i>Bits Vizag</p>
+          </div>
+          <a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" class="btn btn-secondary"
+            style="width: 100%;">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Campus Visuals</span>
+        <h2 class="section-title">Community Gallery</h2>
+        <p class="section-subtitle">
+          Highlights from BITS Vizag student builder workshops, hackathons, and technical meetups.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/gallery/g1.jpg" alt="AWS Cloud Workshop BITS Vizag" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-caption">AWS Cloud Workshop BITS Vizag</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery/g2.jpg" alt="GenAI & Bedrock Innovation Lab" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-caption">GenAI & Bedrock Innovation Lab</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery/g3.jpg" alt="Student Builder Meetup Auditorium" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-caption">Student Builder Meetup</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery/g4.jpg" alt="Serverless & Lambda Deep Dive" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-caption">Serverless & Lambda Lab</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery/g5.jpg" alt="DevOps & Cloud Security Summit" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-caption">DevOps & Cloud Security</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery/g6.jpg" alt="AWS SBCL Chapter Inauguration" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-caption">AWS SBCL Chapter Launch</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Lightbox Modal -->
+  <div id="lightbox-modal" class="modal-overlay">
+    <div style="max-width: 900px; width: 100%; position: relative; text-align: center;">
+      <button id="lightbox-close" class="modal-close" style="top: -40px; right: 0;">
+        <i data-lucide="x"></i>
+      </button>
+      <img id="lightbox-img" src="" alt="Enlarged Gallery Visual"
+        style="width: 100%; max-height: 80vh; object-fit: contain; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+      <p id="lightbox-caption"
+        style="font-family: var(--font-mono); color: var(--text-primary); margin-top: 14px; font-size: 1.1rem;"></p>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Everything you need to know about the AWS Student Builder Center chapter at BITS Vizag.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What is AWS Builder Center?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>AWS Builder Center is a student-led campus community initiative that helps students explore cloud
+              computing, AI, serverless architecture, and modern software development through workshops, hands-on
+              projects, and peer collaboration.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can beginners with no cloud experience join?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely! Our community welcomes students from all academic years and engineering branches. We start
+              with fundamental concepts and step-by-step guided hands-on learning.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is participation free for BITS Vizag students?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, 100% free! All campus meetups, classroom workshops, learning materials, and project sessions are
+              freely accessible to students.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do I need prior coding knowledge to participate?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>While basic programming knowledge is helpful, it is not strictly required. We cover foundational
+              concepts, low-code tools, and structured tutorials for absolute beginners.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How do I officially register and participate?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Simply click on any "Register Now" button on this website or scan the community QR code to fill out our
+              Google Registration Form. You will receive event updates and community access details.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community CTA Box -->
+  <section id="community" style="padding-bottom: 60px;">
+    <div class="container">
+      <div class="community-box">
+        <span class="section-tag">Join the Movement</span>
+        <h2 class="section-title" style="margin-bottom: 12px;">Become an AWS Student Builder Today</h2>
+        <p style="color: var(--text-secondary); max-width: 600px; font-size: 1.05rem;">
+          Scan the QR code below or click the registration button to join the Baba Institute of Technology and Sciences
+          student cloud community.
+        </p>
+
+        <div class="qr-code-box">
+          <img src="assets/qr-code.png" alt="Registration Form QR Code" class="qr-code-img">
+        </div>
+
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+          <a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" rel="noopener noreferrer"
+            class="btn btn-primary">
+            Register Now <i data-lucide="arrow-right" class="btn-icon"></i>
+          </a>
+          <a href="#" class="btn btn-secondary">
+            <i data-lucide="message-circle" style="width: 18px; color: #59F3D5;"></i> Join WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Leader Card -->
+  <section id="contact" style="padding-top: 40px;">
+    <div class="container">
+      <div class="contact-card">
+        <div class="leader-avatar">MA</div>
+        <div class="leader-details">
+          <h3>Mahendra Achanta</h3>
+          <p class="leader-role">AWS Student Builder Campus Leader</p>
+          <p class="leader-institution">Baba Institute of Technology and Sciences (BITS Vizag)</p>
+          <div class="social-links">
+            <a href="www.linkedin.com/in/mahendra-achanta-0b321231b" target="_blank" rel="noopener noreferrer"
+              class="social-link" title="LinkedIn Profile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.75a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9z" />
+              </svg>
+            </a>
+            <a href="https://github.com/Mahi-0110" target="_blank" rel="noopener noreferrer" class="social-link"
+              title="GitHub Profile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/mahendra.achanta/" target="_blank" rel="noopener noreferrer"
+              class="social-link" title="Instagram Profile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="mailto:achantamahendra@gmail.com" class="social-link" title="Send Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <img src="assets/logo.png" alt="AWS Builder Center BITS Vizag" class="footer-logo">
+          <p class="footer-desc">
+            Empowering students at Baba Institute of Technology and Sciences to explore cloud computing, AI, and
+            emerging technologies.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#about-aws" class="footer-link">About AWS</a></li>
+            <li><a href="#builder-center" class="footer-link">Builder Center</a></li>
+            <li><a href="#why-join" class="footer-link">Why Join</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul class="footer-links">
+            <li><a href="#roadmap" class="footer-link">Learning Journey</a></li>
+            <li><a href="#tech-explorer" class="footer-link">Technologies</a></li>
+            <li><a href="#activities" class="footer-link">Campus Activities</a></li>
+            <li><a href="#events" class="footer-link">Upcoming Events</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" class="footer-link">Register Form</a></li>
+            <li><a href="https://www.linkedin.com/in/achanta-mahendra" target="_blank" class="footer-link">Campus
+                Leader</a></li>
+            <li><a href="#faq" class="footer-link">FAQ</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- MANDATORY DISCLAIMER BOX -->
+      <div class="disclaimer-box">
+        "This website is independently created by an AWS Student Builder Campus Leader to support the student community.
+        It is not an official Amazon Web Services (AWS) website."
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 AWS Student Builder Center - BITS Vizag Chapter. All rights reserved.</p>
+        <p>Built with Passion by Mahendra Achanta (AWS Student Builder Campus Leader)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
