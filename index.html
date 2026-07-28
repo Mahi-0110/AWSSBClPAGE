@@ -64,13 +64,36 @@
   <div class="cursor-glow"></div>
   <canvas id="particle-canvas"></canvas>
 
-  <!-- Loading Screen -->
-  <div id="loading-screen">
-    <div class="loader-content">
-      <img src="assets/logo.png" alt="AWS Student Builder Center Logo" class="loader-logo">
-      <div class="loader-progress">
-        <div class="loader-bar"></div>
+  <!-- Creative Minimal Preloader Screen -->
+  <div id="loading-screen" aria-label="Loading AWS Student Builder Center">
+    <div class="loader-bg-grid"></div>
+    <div class="loader-glow-orb"></div>
+
+    <div class="loader-container">
+
+      <!-- Minimal Orbit Ring Portal -->
+      <div class="loader-portal-wrap">
+        <div class="orbit-ring ring-outer"></div>
+        <div class="orbit-ring ring-middle"></div>
+        <div class="orbit-ring ring-inner"></div>
+
+        <div class="loader-logo-container">
+          <img src="assets/logo.svg" alt="AWS Student Builder Center BITS Vizag" class="loader-logo">
+        </div>
       </div>
+
+      <!-- Live High-Tech Progress Counter & Status Text -->
+      <div class="loader-status-wrap">
+        <div class="loader-progress-track">
+          <div class="loader-progress-fill" id="loader-progress-bar"></div>
+        </div>
+
+        <div class="loader-status-info">
+          <span class="loader-status-text" id="loader-status-text">INITIALIZING CLOUD NODES...</span>
+          <span class="loader-percent" id="loader-percent">0%</span>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -78,7 +101,7 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="#hero" class="nav-brand" aria-label="AWS Builder Center Home">
-        <img src="assets/logo.png" alt="AWS Student Builder Center" class="nav-logo">
+        <img src="assets/logo.svg" alt="AWS Student Builder Center BITS Vizag" class="nav-logo">
       </a>
 
       <ul class="nav-links">
@@ -96,8 +119,9 @@
       </ul>
 
       <div class="nav-actions">
-        <a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          Register Now <i data-lucide="arrow-right" class="btn-icon"></i>
+        <a href="#registration" class="btn-nav-register" aria-label="Register Now for AWS Builder Center">
+          <span>Register Now</span>
+          <i data-lucide="arrow-right" class="nav-btn-icon"></i>
         </a>
       </div>
 
@@ -119,8 +143,7 @@
       <a href="#gallery" class="nav-link">Gallery</a>
       <a href="#faq" class="nav-link">FAQ</a>
       <a href="#contact" class="nav-link">Contact</a>
-      <a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" class="btn btn-primary"
-        style="margin-top: 10px; text-align: center;">Register Now</a>
+      <a href="#registration" class="btn btn-primary" style="margin-top: 10px; text-align: center;">Register Now</a>
     </div>
   </header>
 
@@ -143,11 +166,11 @@
         </p>
 
         <div class="hero-ctas">
-          <a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" rel="noopener noreferrer"
-            class="btn btn-primary">
+          <a href="#registration" class="btn btn-primary">
             Register Now <i data-lucide="arrow-right" class="btn-icon"></i>
           </a>
-          <a href="https://chat.whatsapp.com/CL9yrVUuL0i7HDB2lltAYP" class="btn btn-secondary">
+          <a href="https://chat.whatsapp.com/CL9yrVUuL0i7HDB2lltAYP" target="_blank" rel="noopener noreferrer"
+            class="btn btn-secondary">
             <i data-lucide="message-circle" style="width: 18px; color: #59F3D5;"></i> Join WhatsApp Community
           </a>
         </div>
@@ -165,7 +188,7 @@
       <div class="hero-card-stack">
         <div class="hero-main-card">
           <div class="card-logo-box">
-            <img src="assets/logo.png" alt="AWS Builder Center" class="card-brand-logo">
+            <img src="assets/logo.svg" alt="AWS Builder Center BITS Vizag" class="card-brand-logo">
             <span class="card-code-tag">ESTD 2026</span>
           </div>
 
@@ -277,13 +300,24 @@
   <!-- About Builder Center Section -->
   <section id="builder-center">
     <div class="container">
+
+      <!-- Centered Section Header -->
+      <div class="section-header">
+        <span class="section-tag">Student Empowerment</span>
+        <h2 class="section-title">What is AWS Builder Center?</h2>
+        <p class="section-subtitle">
+          AWS Builder Center is a student-driven initiative designed to encourage hands-on technical exploration,
+          curiosity, and practical skills development in cloud technology.
+        </p>
+      </div>
+
+      <!-- Symmetrical 2-Column Grid Box -->
       <div class="builder-center-box">
         <div class="builder-info">
-          <span class="section-tag">Student Empowerment</span>
-          <h3>What is AWS Builder Center?</h3>
-          <p>
-            AWS Builder Center is a student-driven initiative designed to encourage hands-on technical exploration,
-            curiosity, and practical skills development in cloud technology.
+          <h3 class="builder-info-title">Core Community Pillars</h3>
+          <p class="builder-info-desc">
+            Our campus chapter provides engineering students with real-world infrastructure access, peer mentoring, and
+            practical problem-solving opportunities.
           </p>
           <ul class="builder-list">
             <li class="builder-list-item">
@@ -305,26 +339,29 @@
           </ul>
         </div>
 
-        <div class="glass-card" style="padding: 40px; border-color: rgba(255,153,0,0.3);">
-          <h4 style="font-family: var(--font-mono); font-size: 1.2rem; color: var(--aws-orange); margin-bottom: 14px;">
-            Our Community Philosophy</h4>
-          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem; margin-bottom: 20px;">
+        <div class="glass-card philosophy-card">
+          <div class="philosophy-header">
+            <i data-lucide="sparkles" class="philosophy-icon"></i>
+            <h4 class="philosophy-title">Our Community Philosophy</h4>
+          </div>
+          <p class="philosophy-text">
             We focus strictly on genuine learning, technology curiosity, and hands-on skill building. We inspire
             engineering students to experiment with modern architectures and create impactful software.
           </p>
-          <div
-            style="background: rgba(255, 153, 0, 0.08); padding: 14px 18px; border-radius: var(--radius-sm); border-left: 3px solid var(--aws-orange); font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-primary);">
-            "The best way to predict the future is to build it."
+          <div class="philosophy-quote-box">
+            <i data-lucide="quote" class="quote-icon"></i>
+            <p class="quote-text">"The best way to predict the future is to build it."</p>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- Why Join Section -->
-  <section id="why-join">
+  <section id="why-join" class="why-join-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header text-center">
         <span class="section-tag">Student Benefits</span>
         <h2 class="section-title">Why Join Our Community?</h2>
         <p class="section-subtitle">
@@ -333,47 +370,47 @@
         </p>
       </div>
 
-      <div class="cards-grid">
-        <div class="glass-card">
-          <div class="card-icon"><i data-lucide="book-open"></i></div>
+      <div class="cards-grid why-join-grid">
+        <div class="glass-card feature-card">
+          <div class="card-icon icon-orange"><i data-lucide="book-open"></i></div>
           <h3 class="card-title">Learn Cloud</h3>
-          <p class="card-text">Master fundamental and advanced cloud concepts through guided learning roadmaps and AWS
-            documentation.</p>
+          <p class="card-text">Master fundamental and advanced cloud concepts through guided learning roadmaps and
+            official AWS documentation.</p>
         </div>
 
-        <div class="glass-card">
-          <div class="card-icon"><i data-lucide="sparkles"></i></div>
+        <div class="glass-card feature-card">
+          <div class="card-icon icon-teal"><i data-lucide="sparkles"></i></div>
           <h3 class="card-title">Explore AI</h3>
           <p class="card-text">Experiment with Foundation Models, prompt engineering, and generative AI APIs using
             Amazon Bedrock.</p>
         </div>
 
-        <div class="glass-card">
-          <div class="card-icon"><i data-lucide="code-2"></i></div>
+        <div class="glass-card feature-card">
+          <div class="card-icon icon-purple"><i data-lucide="code-2"></i></div>
           <h3 class="card-title">Build Projects</h3>
-          <p class="card-text">Transform theoretical knowledge into working cloud-native web applications and backend
-            APIs.</p>
+          <p class="card-text">Transform theoretical knowledge into working cloud-native web applications and serverless
+            backend APIs.</p>
         </div>
 
-        <div class="glass-card">
-          <div class="card-icon"><i data-lucide="users"></i></div>
+        <div class="glass-card feature-card">
+          <div class="card-icon icon-pink"><i data-lucide="users"></i></div>
           <h3 class="card-title">Tech Community</h3>
           <p class="card-text">Join a passionate network of student developers, designers, and tech enthusiasts at BITS
-            Vizag.</p>
+            Vizag campus.</p>
         </div>
 
-        <div class="glass-card">
-          <div class="card-icon"><i data-lucide="folder-git-2"></i></div>
+        <div class="glass-card feature-card">
+          <div class="card-icon icon-teal"><i data-lucide="folder-git-2"></i></div>
           <h3 class="card-title">Learning Resources</h3>
           <p class="card-text">Get curated access to AWS Skill Builder, workshop repositories, sample code, and
             architecture diagrams.</p>
         </div>
 
-        <div class="glass-card">
-          <div class="card-icon"><i data-lucide="calendar"></i></div>
+        <div class="glass-card feature-card">
+          <div class="card-icon icon-green"><i data-lucide="calendar"></i></div>
           <h3 class="card-title">Events & Workshops</h3>
-          <p class="card-text">Participate in regular technical meetups, live coding sessions, and campus cloud
-            hackathons.</p>
+          <p class="card-text">Participate in regular technical meetups, live coding sessions, lab hackathons, and guest
+            speaker events.</p>
         </div>
       </div>
     </div>
@@ -681,7 +718,7 @@
             style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 24px;">
             <p><i data-lucide="map-pin" style="width: 14px; color: var(--aws-orange);"></i> BITS Vizag </p>
           </div>
-          <a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" class="btn btn-primary"
+          <a href="https://forms.gle/7o1euQz3cRvgLNmPA" target="_blank" class="btn btn-primary"
             style="width: 100%;">Register Now</a>
         </div>
 
@@ -698,7 +735,7 @@
             style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 24px;">
             <p><i data-lucide="map-pin" style="width: 14px; color: var(--aws-orange);"></i> Computer Science Lab 2</p>
           </div>
-          <a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" class="btn btn-secondary"
+          <a href="https://forms.gle/7o1euQz3cRvgLNmPA" target="_blank" class="btn btn-secondary"
             style="width: 100%;">Register Now</a>
         </div>
 
@@ -715,7 +752,7 @@
             style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 24px;">
             <p><i data-lucide="map-pin" style="width: 14px; color: var(--aws-orange);"></i>Bits Vizag</p>
           </div>
-          <a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" class="btn btn-secondary"
+          <a href="https://forms.gle/7o1euQz3cRvgLNmPA" target="_blank" class="btn btn-secondary"
             style="width: 100%;">Register Now</a>
         </div>
       </div>
@@ -855,39 +892,386 @@
             <i data-lucide="chevron-down" class="faq-icon"></i>
           </div>
           <div class="faq-answer">
-            <p>Simply click on any "Register Now" button on this website or scan the community QR code to fill out our
-              Google Registration Form. You will receive event updates and community access details.</p>
+            <p>Simply click on any "Register Now" button on this website to complete your registration. You will receive
+              event updates and community access details.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Community CTA Box -->
-  <section id="community" style="padding-bottom: 60px;">
+  <!-- ====================================================== -->
+  <!-- REGISTRATION SECTION (AWS STUDENT BUILDER CENTER)   -->
+  <!-- ====================================================== -->
+  <section id="registration" class="registration-section">
     <div class="container">
-      <div class="community-box">
-        <span class="section-tag">Join the Movement</span>
-        <h2 class="section-title" style="margin-bottom: 12px;">Become an AWS Student Builder Today</h2>
-        <p style="color: var(--text-secondary); max-width: 600px; font-size: 1.05rem;">
-          Scan the QR code below or click the registration button to join the Baba Institute of Technology and Sciences
-          student cloud community.
-        </p>
 
-        <div class="qr-code-box">
-          <img src="assets/qr-code.png" alt="Registration Form QR Code" class="qr-code-img">
+      <!-- Section Header -->
+      <div class="section-header text-center">
+        <div class="registration-hero-badge">
+          <span class="badge-dot-glow"></span>
+          <span>OFFICIAL AWS STUDENT BUILDER ONBOARDING</span>
+        </div>
+        <h2 class="section-title registration-main-title">Join the AWS Student Builder Community</h2>
+        <h3 class="registration-subtitle-main">Start your cloud journey in two simple steps.</h3>
+        <p class="section-subtitle registration-desc">
+          Complete your official AWS Student Builder registration first, then submit your AWS Builder Alias so we can
+          verify your participation through the AWS Campus Leader dashboard.
+        </p>
+      </div>
+
+      <!-- Interactive 2-Step Timeline Bar -->
+      <div class="registration-timeline-container" aria-label="Registration Timeline Steps">
+        <div class="timeline-track-bar">
+          <div class="timeline-fill-bar" id="timeline-progress-fill"></div>
         </div>
 
-        <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
-          <a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" rel="noopener noreferrer"
-            class="btn btn-primary">
-            Register Now <i data-lucide="arrow-right" class="btn-icon"></i>
-          </a>
-          <a href="#" class="btn btn-secondary">
-            <i data-lucide="message-circle" style="width: 18px; color: #59F3D5;"></i> Join WhatsApp
-          </a>
+        <div class="timeline-step-nodes">
+          <div class="timeline-node active-node" id="node-step-1">
+            <div class="node-circle">①</div>
+            <div class="node-label">Register with AWS</div>
+          </div>
+
+          <div class="timeline-node-connector">
+            <i data-lucide="chevrons-right" class="connector-arrow"></i>
+          </div>
+
+          <div class="timeline-node" id="node-step-2">
+            <div class="node-circle">②</div>
+            <div class="node-label">Submit Builder Alias</div>
+          </div>
         </div>
       </div>
+
+      <!-- Two-Column Cards Grid -->
+      <div class="step-cards-grid">
+
+        <!-- STEP 1 CARD -->
+        <div class="step-card step-card-primary glass-card">
+          <div class="step-badge-pill">STEP 01</div>
+
+          <!-- Futuristic Campus SVG Illustration -->
+          <div class="illustration-container">
+            <svg class="step-illustration-svg" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <defs>
+                <linearGradient id="rocketBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FFC800" />
+                  <stop offset="50%" stop-color="#FF9900" />
+                  <stop offset="100%" stop-color="#FF5500" />
+                </linearGradient>
+
+                <linearGradient id="rocketNoseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#FF2A85" />
+                  <stop offset="100%" stop-color="#B38BFF" />
+                </linearGradient>
+
+                <linearGradient id="rocketFinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#59F3D5" />
+                  <stop offset="100%" stop-color="#00C2FF" />
+                </linearGradient>
+
+                <linearGradient id="flameGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#59F3D5" />
+                  <stop offset="40%" stop-color="#FF9900" />
+                  <stop offset="100%" stop-color="#FF2D55" />
+                </linearGradient>
+
+                <linearGradient id="portalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FF9900" stop-opacity="0.9" />
+                  <stop offset="100%" stop-color="#FF5500" stop-opacity="0.3" />
+                </linearGradient>
+                <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#59F3D5" stop-opacity="0.7" />
+                  <stop offset="100%" stop-color="#87EFFF" stop-opacity="0.2" />
+                </linearGradient>
+                <filter id="svgGlow1" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="8" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+                <filter id="rocketGlow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+
+              <!-- Futuristic Campus Grid -->
+              <path d="M30 210 L370 210 M50 225 L350 225 M80 195 L320 195" stroke="rgba(255,255,255,0.08)"
+                stroke-width="1.5" />
+              <path d="M100 185 L60 235 M200 185 L200 235 M300 185 L340 235" stroke="rgba(255,255,255,0.05)"
+                stroke-width="1" />
+
+              <!-- Cloud Gateway Portal Ring -->
+              <circle cx="200" cy="115" r="72" fill="url(#portalGrad)" opacity="0.18" filter="url(#svgGlow1)" />
+              <circle cx="200" cy="115" r="72" stroke="#FF9900" stroke-width="2" stroke-dasharray="10 6"
+                class="spinning-portal" />
+              <circle cx="200" cy="115" r="54" stroke="rgba(89,243,213,0.6)" stroke-width="1.5" />
+
+              <!-- Cloud Gateway Building -->
+              <path
+                d="M160 125 C160 110 172 100 186 100 C190 90 202 83 214 88 C224 83 238 90 240 100 C248 102 254 110 252 119 C256 127 250 135 242 135 L168 135 C160 135 156 127 160 125 Z"
+                fill="url(#cloudGrad)" filter="url(#svgGlow1)" />
+
+              <!-- Detailed Colorful Cyber Rocket Launch Graphic -->
+              <g class="animated-svg-rocket" filter="url(#rocketGlow)">
+                <!-- Thruster Exhaust Flame -->
+                <path d="M194 82 Q200 115 206 82 Q200 102 194 82 Z" fill="url(#flameGrad)" class="rocket-fire-pulse" />
+                <path d="M197 82 Q200 100 203 82 Z" fill="#FFFFFF" class="rocket-fire-pulse" />
+
+                <!-- Left & Right Wing Fins -->
+                <path d="M188 64 L175 80 C175 80 184 82 188 78 Z" fill="url(#rocketFinGrad)" />
+                <path d="M212 64 L225 80 C225 80 216 82 212 78 Z" fill="url(#rocketFinGrad)" />
+
+                <!-- Rocket Main Body -->
+                <path d="M188 48 C188 48 186 66 188 80 L212 80 C214 66 212 48 212 48 Z" fill="url(#rocketBodyGrad)"
+                  stroke="rgba(255,255,255,0.4)" stroke-width="0.8" />
+
+                <!-- Nose Cone -->
+                <path d="M200 25 C193 38 188 48 188 48 L212 48 C212 48 207 38 200 25 Z" fill="url(#rocketNoseGrad)" />
+
+                <!-- Metallic Stripe Accent -->
+                <rect x="188" y="58" width="24" height="4" fill="#59F3D5" />
+
+                <!-- Porthole Window -->
+                <circle cx="200" cy="53" r="6" fill="#171D26" stroke="#59F3D5" stroke-width="1.8" />
+                <circle cx="200" cy="53" r="3" fill="#87EFFF" />
+                <circle cx="198" cy="51" r="1.2" fill="#FFFFFF" />
+
+                <!-- Engine Nozzle Base -->
+                <rect x="193" y="79" width="14" height="4" rx="1" fill="#E65100" />
+              </g>
+
+              <!-- Floating Micro Badges -->
+              <g class="svg-float-tag-1">
+                <rect x="40" y="45" width="105" height="30" rx="8" fill="rgba(14,18,25,0.85)" stroke="#FF9900"
+                  stroke-width="1" />
+                <text x="50" y="65" fill="#59F3D5" font-size="11" font-family="monospace">Bitly Referral</text>
+              </g>
+
+              <g class="svg-float-tag-2">
+                <rect x="255" y="150" width="110" height="30" rx="8" fill="rgba(14,18,25,0.85)" stroke="#59F3D5"
+                  stroke-width="1" />
+                <text x="265" y="170" fill="#FF9900" font-size="11" font-family="monospace">☁ Entry Gateway</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="step-card-body">
+            <h3 class="step-card-title">Register with AWS</h3>
+            <p class="step-card-desc">
+              Complete your official AWS Student Builder registration using our referral link. Once your registration is
+              successful, AWS will automatically generate your personal <strong>AWS Builder Alias</strong>.
+            </p>
+
+            <div class="step-action-box">
+              <a href="https://bit.ly/4vpiQ5a" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-magnetic step-action-btn pulse-glow-btn"
+                aria-label="Register with AWS via referral link">
+                <span>🚀 Register with AWS</span>
+                <i data-lucide="external-link" class="btn-icon"></i>
+              </a>
+            </div>
+
+            <div class="step-card-footer">
+              <i data-lucide="sparkles" style="color: var(--aws-orange); width: 15px;"></i>
+              <span>Takes ~2 minutes • Unlocks Official AWS Student Portal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ANIMATED TRANSITION FLOW CONNECTOR -->
+        <div class="animated-flow-connector" aria-hidden="true">
+          <div class="connector-line-glow"></div>
+
+          <div class="flow-step-nodes">
+            <div class="flow-pill-node pill-cloud">
+              <i data-lucide="cloud"></i>
+              <span>Cloud</span>
+            </div>
+            <div class="flow-arrow-down"><i data-lucide="chevron-right" class="desktop-arrow"></i><i
+                data-lucide="chevron-down" class="mobile-arrow"></i></div>
+
+            <div class="flow-pill-node pill-id">
+              <i data-lucide="fingerprint"></i>
+              <span>Digital Identity</span>
+            </div>
+            <div class="flow-arrow-down"><i data-lucide="chevron-right" class="desktop-arrow"></i><i
+                data-lucide="chevron-down" class="mobile-arrow"></i></div>
+
+            <div class="flow-pill-node pill-alias">
+              <i data-lucide="key-round"></i>
+              <span>Builder Alias</span>
+            </div>
+            <div class="flow-arrow-down"><i data-lucide="chevron-right" class="desktop-arrow"></i><i
+                data-lucide="chevron-down" class="mobile-arrow"></i></div>
+
+            <div class="flow-pill-node pill-verify">
+              <i data-lucide="shield-check"></i>
+              <span>Verification</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 CARD -->
+        <div class="step-card step-card-secondary glass-card">
+          <div class="step-badge-pill step2-pill">STEP 02</div>
+
+          <!-- Student Builder ID & Shield SVG Illustration -->
+          <div class="illustration-container">
+            <svg class="step-illustration-svg" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <defs>
+                <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#59F3D5" stop-opacity="0.85" />
+                  <stop offset="100%" stop-color="#B38BFF" stop-opacity="0.3" />
+                </linearGradient>
+                <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="rgba(255,255,255,0.09)" />
+                  <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
+                </linearGradient>
+              </defs>
+
+              <!-- Digital Builder ID Card -->
+              <rect x="75" y="45" width="250" height="155" rx="16" fill="url(#cardBg)" stroke="rgba(89,243,213,0.45)"
+                stroke-width="1.5" filter="url(#svgGlow1)" />
+              <rect x="90" y="60" width="52" height="52" rx="26" fill="#171D26" stroke="#FF9900" stroke-width="1.5" />
+
+              <!-- Student Silhouette -->
+              <circle cx="116" cy="80" r="12" fill="#59F3D5" />
+              <path d="M100 102 C100 92 107 87 116 87 C125 87 132 92 132 102 Z" fill="#59F3D5" />
+
+              <!-- Card Lines -->
+              <rect x="155" y="65" width="135" height="10" rx="5" fill="rgba(255,255,255,0.85)" />
+              <rect x="155" y="85" width="100" height="8" rx="4" fill="rgba(255,153,0,0.85)" />
+              <rect x="155" y="100" width="120" height="6" rx="3" fill="rgba(89,243,213,0.5)" />
+
+              <!-- Builder Alias Field Box -->
+              <rect x="90" y="128" width="220" height="36" rx="8" fill="rgba(14,18,25,0.95)" stroke="#B38BFF"
+                stroke-width="1.2" />
+              <text x="105" y="151" fill="#59F3D5" font-size="12" font-family="monospace" font-weight="bold">ALIAS:
+                builder-bits-2026</text>
+              <circle cx="292" cy="146" r="8" fill="#59F3D5" />
+              <path d="M288 146 L291 149 L296 143" stroke="#0E1219" stroke-width="1.8" stroke-linecap="round" />
+
+              <!-- Floating Verification Shield -->
+              <g class="animated-svg-shield">
+                <path d="M305 85 L335 95 V125 C335 145 305 160 305 160 C305 160 275 145 275 125 V95 L305 85 Z"
+                  fill="url(#shieldGrad)" stroke="#59F3D5" stroke-width="2" />
+                <path d="M297 120 L303 126 L315 113" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </g>
+
+              <!-- Micro Badge -->
+              <g class="svg-float-tag-1">
+                <rect x="35" y="150" width="115" height="28" rx="6" fill="rgba(14,18,25,0.9)" stroke="#59F3D5"
+                  stroke-width="1" />
+                <text x="45" y="168" fill="#FFFFFF" font-size="10" font-family="monospace">✅ Leader CRM Sync</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="step-card-body">
+            <h3 class="step-card-title">Submit Builder Alias</h3>
+            <p class="step-card-desc">
+              After completing your AWS registration, submit your Full Name and AWS Builder Alias using our Google Form.
+              This allows us to verify your registration through the AWS Student Builder Campus Leader CRM Dashboard.
+            </p>
+
+            <div class="step-action-box">
+              <a href="https://forms.gle/7o1euQz3cRvgLNmPA" target="_blank" rel="noopener noreferrer"
+                class="btn btn-success btn-magnetic step-action-btn" aria-label="Submit Builder Alias via Google Form">
+                <span>✅ Submit Builder Alias</span>
+                <i data-lucide="arrow-right" class="btn-icon"></i>
+              </a>
+            </div>
+
+            <div class="step-card-footer">
+              <i data-lucide="shield-check" style="color: var(--accent-teal); width: 15px;"></i>
+              <span>Official Verification Form • BITS Student Dashboard</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Information Panel Card -->
+      <div class="info-panel-box glass-card">
+        <div class="info-panel-layout">
+          <div class="info-panel-icon-wrap">
+            <div class="info-panel-shield-icon">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <span class="info-verified-badge">AWS SBCL CRM</span>
+          </div>
+
+          <div class="info-panel-text-content">
+            <h4 class="info-panel-heading">
+              <i data-lucide="help-circle"
+                style="color: var(--aws-orange); margin-right: 6px; vertical-align: middle;"></i>
+              Why do I need to submit my Builder Alias?
+            </h4>
+            <p class="info-panel-paragraph">
+              The <strong>AWS Builder Alias</strong> is generated after your official AWS Student Builder registration.
+            </p>
+            <p class="info-panel-paragraph">
+              Submitting your Builder Alias helps us verify your registration in the <strong>AWS Campus Leader CRM
+                Dashboard</strong> and accurately track participation for workshops, hackathons, and community
+              certifications at BITS Vizag.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Complete Student Journey Stepper -->
+      <div class="user-journey-section">
+        <h4 class="journey-heading">
+          <i data-lucide="route" style="color: var(--accent-teal); margin-right: 8px; vertical-align: middle;"></i>
+          Complete Registration Workflow
+        </h4>
+
+        <div class="journey-stepper-track">
+
+          <div class="journey-step-item">
+            <div class="journey-step-icon"><i data-lucide="globe"></i></div>
+            <div class="journey-step-title">🌐 Website</div>
+            <div class="journey-step-sub">Visit BITS Campus Page</div>
+          </div>
+
+          <div class="journey-arrow-icon"><i data-lucide="chevron-right"></i></div>
+
+          <div class="journey-step-item">
+            <div class="journey-step-icon"><i data-lucide="rocket"></i></div>
+            <div class="journey-step-title">🚀 AWS Registration</div>
+            <div class="journey-step-sub">Bitly Referral Link</div>
+          </div>
+
+          <div class="journey-arrow-icon"><i data-lucide="chevron-right"></i></div>
+
+          <div class="journey-step-item">
+            <div class="journey-step-icon"><i data-lucide="cloud"></i></div>
+            <div class="journey-step-title">☁ Builder Alias</div>
+            <div class="journey-step-sub">Generated by AWS</div>
+          </div>
+
+          <div class="journey-arrow-icon"><i data-lucide="chevron-right"></i></div>
+
+          <div class="journey-step-item">
+            <div class="journey-step-icon"><i data-lucide="file-text"></i></div>
+            <div class="journey-step-title">📝 Verification Form</div>
+            <div class="journey-step-sub">Google Form</div>
+          </div>
+
+          <div class="journey-arrow-icon"><i data-lucide="chevron-right"></i></div>
+
+          <div class="journey-step-item step-verified">
+            <div class="journey-step-icon"><i data-lucide="check-circle-2"></i></div>
+            <div class="journey-step-title">✅ Verified</div>
+            <div class="journey-step-sub">Campus Leader CRM</div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -939,7 +1323,7 @@
     <div class="container">
       <div class="footer-top">
         <div>
-          <img src="assets/logo.png" alt="AWS Builder Center BITS Vizag" class="footer-logo">
+          <img src="assets/logo.svg" alt="AWS Builder Center BITS Vizag" class="footer-logo">
           <p class="footer-desc">
             Empowering students at Baba Institute of Technology and Sciences to explore cloud computing, AI, and
             emerging technologies.
@@ -969,7 +1353,7 @@
         <div class="footer-col">
           <h4>Connect</h4>
           <ul class="footer-links">
-            <li><a href="https://forms.gle/wYSsw37iDCxbB5ho9" target="_blank" class="footer-link">Register Form</a></li>
+            <li><a href="https://forms.gle/7o1euQz3cRvgLNmPA" target="_blank" class="footer-link">Register Form</a></li>
             <li><a href="https://www.linkedin.com/in/achanta-mahendra" target="_blank" class="footer-link">Campus
                 Leader</a></li>
             <li><a href="#faq" class="footer-link">FAQ</a></li>

@@ -15,16 +15,54 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQAccordion();
   initMobileMenu();
   initLucideIcons();
+  initRegistrationFlow();
 });
 
 /* 1. Loading Screen Handler */
 function initLoadingScreen() {
   const loader = document.getElementById('loading-screen');
-  if (!loader) return;
+  const bar = document.getElementById('loader-progress-bar');
+  const percentText = document.getElementById('loader-percent');
+  const statusText = document.getElementById('loader-status-text');
 
-  setTimeout(() => {
-    loader.classList.add('hidden');
-  }, 1800);
+  if (!loader || !bar || !percentText) return;
+
+  const statuses = [
+    'INITIALIZING CLOUD NODES...',
+    'CONNECTING BITS VIZAG...',
+    'LOADING BUILDER CENTER...',
+    'READY TO BUILD 🚀'
+  ];
+
+  let progress = 0;
+  const duration = 1400; // 1.4s load time
+  const intervalTime = 20;
+  const increment = 100 / (duration / intervalTime);
+
+  const timer = setInterval(() => {
+    progress += increment;
+
+    if (progress >= 100) {
+      progress = 100;
+      clearInterval(timer);
+      bar.style.width = '100%';
+      percentText.innerText = '100%';
+      if (statusText) statusText.innerText = 'READY TO BUILD 🚀';
+
+      setTimeout(() => {
+        loader.classList.add('hidden');
+      }, 350);
+    } else {
+      bar.style.width = `${Math.floor(progress)}%`;
+      percentText.innerText = `${Math.floor(progress)}%`;
+
+      if (statusText) {
+        if (progress > 75) statusText.innerText = statuses[3];
+        else if (progress > 50) statusText.innerText = statuses[2];
+        else if (progress > 25) statusText.innerText = statuses[1];
+      }
+    }
+  }, intervalTime);
 }
 
 /* 2. Interactive Background Canvas with Floating Particles */
@@ -404,3 +442,63 @@ function initLucideIcons() {
     window.lucide.createIcons();
   }
 }
+
+/* 11. Registration Flow Micro-interactions & Scroll Observer */
+function initRegistrationFlow() {
+  const fillBar = document.getElementById('timeline-progress-fill');
+  const nodeStep1 = document.getElementById('node-step-1');
+  const nodeStep2 = document.getElementById('node-step-2');
+  const regSection = document.getElementById('registration');
+  const stepCard2 = document.querySelector('.step-card-secondary');
+
+  if (regSection && fillBar && nodeStep1 && nodeStep2) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            fillBar.style.width = '50%';
+            nodeStep1.classList.add('active-node');
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(regSection);
+  }
+
+  if (stepCard2 && fillBar && nodeStep2) {
+    const card2Observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            fillBar.style.width = '100%';
+            nodeStep2.classList.add('active-node');
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    card2Observer.observe(stepCard2);
+  }
+
+  // Magnetic hover effect on buttons
+  const magneticBtns = document.querySelectorAll('.btn-magnetic');
+  magneticBtns.forEach((btn) => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.12}px, ${y * 0.12}px)`;
+    });
+
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'translate(0px, 0px)';
+    });
+  });
+
+  // Refresh Lucide icons if available
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
+}
+
