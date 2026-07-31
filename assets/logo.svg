@@ -47,8 +47,8 @@
     <!-- 'BUILDER CENTER' Typography -->
     <text x="188" y="48" font-family="'IBM Plex Mono', 'JetBrains Mono', 'Courier New', monospace" font-weight="800" font-size="26" fill="#FFFFFF" letter-spacing="2">BUILDER CENTER</text>
     
-    <!-- 'STUDENT COMMUNITY' Larger & Bolder Prominent Typography -->
-    <text x="188" y="86" font-family="'IBM Plex Mono', 'JetBrains Mono', 'Courier New', monospace" font-weight="800" font-size="21" fill="#59F3D5" letter-spacing="2" filter="url(#shadow)">STUDENT COMMUNITY</text>
+    <!-- 'BITS VIZAG CHAPTER' Prominent Typography -->
+    <text x="188" y="86" font-family="'IBM Plex Mono', 'JetBrains Mono', 'Courier New', monospace" font-weight="800" font-size="21" fill="#59F3D5" letter-spacing="2" filter="url(#shadow)">BITS VIZAG CHAPTER</text>
   </g>
 
   <!-- Group 2: BITS VIZAG Colorful Emblem -->

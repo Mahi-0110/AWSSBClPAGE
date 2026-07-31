@@ -3,7 +3,7 @@
    Design System & Styling
    ========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Manrope:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
 
 :root {
   /* Color Tokens */
@@ -34,7 +34,7 @@
   --gradient-card: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
 
   /* Typography */
-  --font-mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+  --font-mono: 'IBM Plex Mono', 'Fira Code', 'JetBrains Mono', 'Share Tech Mono', monospace;
   --font-sans: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Layout & Transitions */
@@ -2624,9 +2624,23 @@ section {
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  section {
+    padding: 44px 0;
+  }
+
+  .hero-title {
+    font-size: 1.65rem;
+    line-height: 1.25;
+  }
+
   .hero-cta {
     flex-direction: column;
     width: 100%;
+    gap: 10px;
   }
 
   .hero-cta .btn {
@@ -2635,8 +2649,18 @@ section {
   }
 
   .hero-stats {
-    flex-direction: column;
-    gap: 14px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .stat-item {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
   }
 
   .stat-divider {
@@ -2647,4 +2671,37 @@ section {
     font-size: 0.7rem;
     padding: 4px 10px;
   }
+
+  .glass-card,
+  .feature-card,
+  .step-card,
+  .philosophy-card {
+    padding: 18px 14px;
+  }
+
+  .section-tag,
+  .registration-hero-badge {
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Pixel / Monospace Typography Optimization */
+code, pre, kbd, samp,
+.font-mono,
+.section-tag,
+.roadmap-step,
+.stat-number,
+.tech-tab,
+.node-circle,
+.node-label,
+.registration-hero-badge,
+.step-badge-pill,
+.hero-badge-pill {
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" 0, "calt" 0;
+  letter-spacing: 0.04em;
 }
