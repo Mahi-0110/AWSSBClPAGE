@@ -368,6 +368,7 @@ function initGalleryLightbox() {
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxCaption = document.getElementById('lightbox-caption');
   const lightboxClose = document.getElementById('lightbox-close');
+  const galleryTrack = document.querySelector('.gallery-track');
 
   if (!lightbox) return;
 
@@ -382,6 +383,7 @@ function initGalleryLightbox() {
         lightboxCaption.textContent = caption ? caption.textContent : '';
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
+        if (galleryTrack) galleryTrack.classList.add('paused');
       }
     });
   });
@@ -389,6 +391,7 @@ function initGalleryLightbox() {
   const closeLightbox = () => {
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
+    if (galleryTrack) galleryTrack.classList.remove('paused');
   };
 
   if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);

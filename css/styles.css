@@ -1376,20 +1376,64 @@ section {
   margin-bottom: 8px;
 }
 
-/* Gallery Masonry Layout */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+/* Gallery Continuous Flow Layout */
+.gallery-scroller {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+}
+
+/* Optional fade effect on edges */
+.gallery-scroller::before,
+.gallery-scroller::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+.gallery-scroller::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-dark), transparent);
+}
+.gallery-scroller::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-dark), transparent);
+}
+
+.gallery-track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 20px;
+  width: max-content;
+  animation: scrollGallery 30s linear infinite;
+}
+
+.gallery-track.paused {
+  animation-play-state: paused;
 }
 
 .gallery-item {
+  flex: 0 0 300px;
+  height: 240px;
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--border-color);
-  height: 240px;
   cursor: pointer;
+}
+
+@keyframes scrollGallery {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 10px));
+  }
 }
 
 .gallery-img {
@@ -2583,9 +2627,13 @@ section {
   }
 
   /* Events & Gallery */
-  .events-grid,
-  .gallery-grid {
+  .events-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    flex: 0 0 260px;
+    height: 200px;
   }
 
   /* FAQ Accordion */
@@ -2670,6 +2718,15 @@ section {
   .step-badge-pill {
     font-size: 0.7rem;
     padding: 4px 10px;
+  }
+
+  .gallery-item {
+    flex: 0 0 220px;
+    height: 160px;
+  }
+
+  .gallery-scroller {
+    padding: 10px 0;
   }
 
   .glass-card,
